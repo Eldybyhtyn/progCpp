@@ -3,9 +3,9 @@
 using namespace std;
 
 void show(int mas[], int length) {
-    int 
+    
     for (int i = 0; i < length; i++) {
-        cout << *(mas + i) << endl;
+        cout << *(mas + i) << " ";
     }
 }
 

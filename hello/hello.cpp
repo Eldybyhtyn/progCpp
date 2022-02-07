@@ -6,12 +6,9 @@ using std::cin;
 double maxelem(double mas[], int length) {
     
     double max = *mas;
-    cout << max << " - 1 max" << std::endl;
     for (int i = 1; i < length; i++) {
-        if (*(mas + i) > *(mas + i - 1)) {
+        if (*(mas + i) > max) {
             max = *(mas + i);
-            cout << *(mas + i) << " > " << *(mas + i - 1) << std::endl;
-            cout << max << " - max" << std::endl;
         }
     }
 
