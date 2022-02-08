@@ -1,25 +1,36 @@
 #include <iostream>
-#include "main.h"
-
-using namespace std;
-
-void show(int num1, int num2) {
-    
-    cout << &num1 << " " << &num2 << endl;
-    cout << (&num1 + 2 == &num2) << endl;
-    
-}
-
-int main() {
-
-    int num1, num2;
-    cout << h << endl;
-    cout << &num1 << " " << &num2 << endl;
-
-    
-
-    show(num1, num2);
-    
-
+ 
+void print(const int*, const int*);
+void twice(int*, int*);
+ 
+int main()
+{
+    int nums1[] = { 1, 2, 3, 4, 5 };
+    int *begin = std::begin(nums1);
+    int *end = std::end(nums1);
+    print(begin, end);
+    std::cout << std::endl;
+ 
+    int nums2[] = { 1, 2, 3, 4, 5 }; 
+    begin = std::begin(nums2);
+    end = std::end(nums2);
+    twice(begin, end);
+    print(begin, end);
+    std::cout << std::endl;
     return 0;
+}
+ 
+void print(const int *begin, const int *end)
+{
+    for (const int *ptr  = begin; ptr != end; ptr++)
+    {
+        std::cout << *ptr << "\t";
+    }
+}
+void twice(int *begin, int *end)
+{
+    for (int *ptr = begin; ptr != end; ptr++)
+    {
+        *ptr = *ptr * 2;
+    }
 }
