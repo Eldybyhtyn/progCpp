@@ -1,33 +1,25 @@
 #include <iostream>
+#include "main.h"
 
 using namespace std;
 
-void show(int mas[], int length) {
+void show(int num1, int num2) {
     
-    for (int i = 0; i < length; i++) {
-        cout << *(mas + i) << " ";
-    }
+    cout << &num1 << " " << &num2 << endl;
+    cout << (&num1 + 2 == &num2) << endl;
+    
 }
 
 int main() {
 
+    int num1, num2;
+    cout << h << endl;
+    cout << &num1 << " " << &num2 << endl;
+
     
+
+    show(num1, num2);
     
-    srand(time(NULL));
-
-    int mas[10];
-
-    for (int i = 0; i < 10; i++) {
-        mas[i] = rand() % 10;
-    }
-
-    for (int i = 0; i < 10; i++) {
-        cout << mas[i] << " ";
-    }
-
-    cout << endl;
-
-    show(mas, sizeof(mas) / sizeof(int));
 
     return 0;
 }
