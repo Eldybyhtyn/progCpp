@@ -20,7 +20,20 @@ int main() {
 
     Human human1 {6, "lox", "togelox"};
 
-    human1.
+    struct Human *ptr;
+    std::string *ptrStr;
+
+    ptr = new struct Human;
+    struct Human human2;
+    ptr = &human2;
+    human2.age = 5;
+    ptr->name = "lol";
+    (*ptr).surname = "hello";
+    ptrStr = &ptr->surname;
+    cout << human2.name << endl;
+
+    cout << ptr << endl;
+    cout << &human2 << endl;
 
     return 0;
 }
